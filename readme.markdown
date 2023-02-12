@@ -98,6 +98,7 @@ dragula(containers, {
   invalid: function (el, handle) {
     return false; // don't prevent any drags from initiating by default
   },
+  animation: false,                  // no animation by default
   direction: 'vertical',             // Y axis is considered when determining where an element would be dropped
   copy: false,                       // elements are moved by default, not copied
   copySortSource: false,             // elements in copy-source containers can be reordered
@@ -196,9 +197,13 @@ By default, spilling an element outside of any containers will move the element 
 
 By default, spilling an element outside of any containers will move the element back to the _drop position previewed by the feedback shadow_. Setting `removeOnSpill` to `true` will ensure elements dropped outside of any approved containers are removed from the DOM. Note that `remove` events won't fire if `copy` is set to `true`.
 
+#### `options.animation`
+
+If the `animation` is true, there will be smooth animation after dragging finish.
+
 #### `options.direction`
 
-When an element is dropped onto a container, it'll be placed near the point where the mouse was released. If the `direction` is `'vertical'`, the default value, the Y axis will be considered. Otherwise, if the `direction` is `'horizontal'`, the X axis will be considered.
+When an element is dropped onto a container, it'll be placed near the point where the mouse was released. If the `direction` is `'vertical'`, the default value, the Y axis will be considered. Otherwise, if the `direction` is `'horizontal'`, the X axis will be considered. Finally, if the `direction` is `'mixed'`, both X and Y axis will be considered.
 
 #### `options.invalid`
 
@@ -306,7 +311,7 @@ See [contributing.markdown][14] for details.
 
 # Support
 
-We have a [dedicated support channel in Slack][24]. See [this issue][21] to get an invite. Support requests won't be handled through the repository.
+There's now a dedicated support channel in Slack. Visit [this page][21] to get an invite. Support requests won't be handled through the repository anymore.
 
 # License
 
@@ -332,7 +337,6 @@ MIT
 [18]: https://david-dm.org/bevacqua/dragula#info=devDependencies
 [19]: https://rawgit.com/bevacqua/dragula/master/resources/patreon.svg
 [20]: https://patreon.com/bevacqua
-[21]: https://github.com/bevacqua/dragula/issues/248
+[21]: https://dragula-slackin.herokuapp.com/
 [22]: https://github.com/valor-software/ng2-dragula
 [23]: http://valor-software.com/ng2-dragula/index.html
-[24]: https://dragula.slack.com
