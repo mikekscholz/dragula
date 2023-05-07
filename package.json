@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bevacqua/dragula.git"
+    "url": "https://github.com/mikekscholz/dragula.git"
   },
   "author": "Nicolas Bevacqua <nicolasbevacqua@gmail.com> (http://bevacqua.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bevacqua/dragula/issues"
+    "url": "https://github.com/mikekscholz/dragula/issues"
   },
-  "homepage": "https://github.com/bevacqua/dragula",
+  "homepage": "https://github.com/mikekscholz/dragula",
   "dependencies": {
     "contra": "1.9.4",
     "crossvent": "1.5.5"
